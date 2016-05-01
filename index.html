@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Text mining</title>
+  <meta name="description" content="">
+  <meta name="author" content="Ola Lie">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='custbg1'>
+  
+  <style>
+#custbg1 {
+  background-image:url(./assets/img/tm.png); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+</style>
+
+<p><br /><br /></p>
+
+<h2>Data Science Capstone</h2>
+
+<h3>Text mining</h3>
+
+<p>Final Project - April 2016</p>
+
+<p>Presented by Ola Lie</p>
+
+<p><br /><br /></p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Explore</h2>
+  <h3>Blogs, news and twitter</h3>
+
+<table>
+  <tr>
+    <td width=30% style="vertical-align:top">The content in these texts is explored
+      in this <a href="https://rpubs.com/olalie57/MilestoneReport/">Milestone&nbsp;Report</a></td>
+    <td width=70% align="bottom"><img src="./assets/img/trigram.png" align="bottom" style="min-height:300px; width:auto;"/>
+    </td>
+  </tr>
+</table>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  
+  <style>
+  #font {font-size: 60%;}
+</style>
+
+<h2>Allgoritm</h2>
+
+<h3>using tm and RWeka</h3>
+
+<table id="font">
+  <tr>
+    <td width=60% style="vertical-align:top">
+      <ol>
+        <li>Create corpus and clean data with tm</li>
+        <li>Create bi-, tri- and tetragrams with RWeka</li>
+        <li>In server.R (shiny)
+          <ul>
+            <li>Strip user input to last three words</li>
+            <li>Search first three words of tetragrams</li>
+            <li>If no matches, search first two words of trigrams</li>
+            <li>If no matches, search first word of bigrams</li>
+            <li>Calculate percentages for matches</li>
+          </ul>
+        </li>
+      </ol>
+    </td>
+    <td width=40% align="bottom"><img src="./assets/img/cloud.png" align="bottom"
+      style="height:395px; width:332px;"/>
+   </td>
+  </tr>
+</table>
+
+</section>
+<section class='' data-state='' id='custbg4'>
+  
+  <style>
+#custbg4 {
+  background-image:url(./assets/img/hourglass.png); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;
+}
+
+
+</style>
+
+<table>
+  <tr>
+    <td width=10%><p>&nbsp;</p></td>
+    <td width=50%>
+      <br /><br />
+  
+      <h2>Performance</h2>
+  
+      <h3 >Less than five seconds<br />
+         response time</h3>
+  
+      <p>The first search<br />
+         might take a bit longer<br />
+          when the app is awakening</p>
+  
+      <br /><br />
+    </td>
+    <td width=40%><p>&nbsp;</p></td>
+  </tr>
+</table>
+
+</section>
+<section class='' data-state='' id='custbg5'>
+  
+  <style>
+#custbg5 {
+  background-image:url(./assets/img/webapp.jpg); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;
+}
+
+</style>
+
+<table>
+  <tr>
+    <td width=20%><p>&nbsp;</p></td>
+    <td width=40% style="vertical-align:top">
+      <br /><br /><br /><br /><br />
+      <h2>Visit the</h2>
+      <a href="https://olalie.shinyapps.io/Capstone/">Web App</a>
+      <br /><br /><br /><br /><br />
+    </td>
+    <td width=40%><p>&nbsp;</p></td>
+  </tr>
+</table>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'solarized', 
+    transition: Reveal.getQueryHash().transition || 'cube', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
