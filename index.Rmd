@@ -1,10 +1,10 @@
 ---
 title       : Text mining
-subtitle    : Capstone - Final Project - April 2016
+subtitle    : Capstone - Final Project - May 2016
 author      : Ola Lie
 job         : 
-framework: revealjs
-revealjs: {theme: solarized, transition: cube}
+framework   : revealjs
+revealjs    : {theme: solarized, transition: cube}
 [comment]:  #framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -20,7 +20,6 @@ knit        : slidify::knit2slides
   background-position: center center;
   background-size: 100%;
 }
-
 </style>
 
 <br /><br />
@@ -54,7 +53,7 @@ Presented by Ola Lie
   #font {font-size: 60%;}
 </style>
 
-## Allgoritm
+## Algorithm
 
 ### using tm and RWeka
 
