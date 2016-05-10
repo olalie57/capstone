@@ -26,7 +26,7 @@ knit        : slidify::knit2slides
 
 ## Data Science Capstone
 ### Text mining
-Final Project - April 2016
+Final Project - May 2016
 
 Presented by Ola Lie
 
