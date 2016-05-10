@@ -65,7 +65,7 @@ Presented by Ola Lie
         <li>Create bi-, tri- and tetragrams with RWeka</li>
         <li>In server.R (shiny)
           <ul>
-            <li>Strip user input to last three words</li>
+            <li>Strip user input to last three (two, one) words</li>
             <li>Search first three words of tetragrams</li>
             <li>If no matches, search first two words of trigrams</li>
             <li>If no matches, search first word of bigrams</li>
